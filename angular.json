@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "todo-demo"
+    }
+  },
+  "defaultProject": "todo-demo",
+  "cli": {
+    "analytics": false
+  }
 }
