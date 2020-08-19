@@ -1,5 +1,7 @@
 # TodoDemo
 
+![image](https://user-images.githubusercontent.com/39472745/90673424-ee022d00-e281-11ea-931b-a7c01ab3a11d.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
 
 ## Development server
