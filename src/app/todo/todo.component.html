@@ -1,1 +1,37 @@
-<p>todo works!</p>
+<div class="card">
+  <section class="card-header">
+    <h1 class="card-title">Todo App</h1>
+  </section>
+  <section class="card-content">
+    <section class="add-todo">
+      <input
+        class="text-input"
+        type="text"
+        [(ngModel)]="newTodo"
+        placeholder="Add new todos here"
+      />
+      <button class="add-todo-btn" (click)="addNewTodo()">Add</button>
+    </section>
+    <section class="todoList">
+      <app-todo-list
+        [todoList]="todoList"
+        (todoListUpdated)="updateTodoList()"
+      ></app-todo-list>
+    </section>
+  </section>
+  <section class="card-footer">
+    <button class="btn-filter" type="button" (click)="setFilterField('all')">
+      All
+    </button>
+    <button class="btn-filter" type="button" (click)="setFilterField('active')">
+      Active
+    </button>
+    <button
+      class="btn-filter"
+      type="button"
+      (click)="setFilterField('completed')"
+    >
+      Completed
+    </button>
+  </section>
+</div>

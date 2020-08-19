@@ -1,1 +1,36 @@
-<p>todo-list works!</p>
+<section class="todo">
+  <h2>Todo List</h2>
+  <ul class="todo-list">
+    <ng-container *ngFor="let todo of todoList">
+      <li class="todo-item">
+        <input
+          type="checkbox"
+          name="todo-state"
+          [id]="todo.todo_name"
+          [checked]="todo.completed"
+          (click)="updateTodoState(todo)"
+        />
+        <label
+          [for]="todo.todo_name"
+          class="todo-name"
+          (dblclick)="editTodo(todo)"
+          [class.completed]="todo.completed"
+        >
+          <p class="todo-text" *ngIf="!todo.editing">{{ todo.todo_name }}</p>
+          <input
+            type="text"
+            name="edit"
+            class="edit"
+            *ngIf="todo.editing"
+            #editedTodo
+            (blur)="updateTodo(todo, editedTodo.value)"
+            (keyup.enter)="updateTodo(todo, editedTodo.value)"
+            (keyup.escape)="cancelEditingTodo(todo)"
+            [value]="todo.todo_name"
+          />
+        </label>
+        <button class="delete-btn" (click)="deleteTodo(todo)">Delete</button>
+      </li>
+    </ng-container>
+  </ul>
+</section>
