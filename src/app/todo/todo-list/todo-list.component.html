@@ -10,8 +10,13 @@
           [checked]="todo.completed"
           (click)="updateTodoState(todo)"
         />
-        <label
+        <!-- <label
           [for]="todo.todo_name"
+          class="todo-name"
+          (dblclick)="editTodo(todo)"
+          [class.completed]="todo.completed"
+        > -->
+        <label
           class="todo-name"
           (dblclick)="editTodo(todo)"
           [class.completed]="todo.completed"
