@@ -27,3 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+Code khá clear rồi, tư tưởng vẫn chỉ là filter list theo 1 value của property nào đó, viết ở tầng service là hợp lý, vì có thể sau này sẽ call api get về.
+Có 1 điểm nhỏ là bạn nên tạo các interface cho các model, các hàm truyền tham số nên có kiểu giá trị, như vậy typing sẽ mạnh mẽ và tận dụng lợi thế của TS hơn JS thuần
